@@ -1,4 +1,4 @@
-25W GST.200UB GIS analysis techniques 2 - Midterm Project – Group 5 Kocheganova Adilya, Wutte Timon, Flor Maximilian
+25W GST.200UB GIS analysis techniques 2 - Midterm Project – Group 5: Kocheganova Adilya, Wutte Timon, Flor Maximilian
  
 Project Titel: "Urban Green Space Accessibility & Suitability Analysis for Graz"
 
@@ -13,13 +13,14 @@ Using multi-criteria evaluation (MCE) and network analysis, this project:
 3. Reveals spatial inequalities in environmental and infrastructural conditions.
 
 
-DATA SOURCES (as of 01.12.2025)
-- Land Cover 2021 (BEV) 
-- buildings, street network, leisure & natural features (OSM) 
+DATA SOURCES
+
+- Road network (OSM)
+- River network (OSM) 
 - DEM (GIS Steiermark)  
-- Population Grid (hub.worldpop.org)  
+- Population density (WorldpopHup)  
 - Urban Atlas Graz 2018 (Copernicus Land Monitoring Service) 
-- Sentinel-2 NDVI imagery (Copernicus)  
+- Sentinel 2 NDVI imagery (ESA)  
 
 All datasets were reprojected to EPSG:31256 (MGI / Austria GK M34)
 
@@ -27,24 +28,25 @@ All datasets were reprojected to EPSG:31256 (MGI / Austria GK M34)
 METHOD SUMMARY
 
 1. Preprocessing  
-- Mosaicking raster tiles  
-- Clipping layers(Graz)  
-- Rasterizing layers (1 m resolution)
+- Mosaicking raster tiles
+- Reprojecting (EPSG 31256)  
+- Clipping (Graz)  
+- Rasterizing (1 m resolution)
 
 2. Deriving Criteria  
-- Slope & elevation (DEM)  
+- Slope (DEM)  
 - NDVI (vegetation)  
 - Distance to roads & rivers  
 - Population density  
-- Land-use classes (Urban Atlas)
+- Landuse (Urban Atlas)
 
 3. Suitability Modeling  
 - Normalization of criteria  
 - Weighting via Analytic Hierarchy Process (AHP)  
-- Weighted overlay → Suitability Index
+- Weighted overlay - Suitability Index
 
 4. Accessibility Modeling  
-- Pedestrian network extraction via OSMnx  
+- network extraction via OSMnx  
 - Walking distance & travel time to green spaces  
 - Aggregation to population grid
 
