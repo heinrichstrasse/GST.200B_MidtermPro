@@ -1,6 +1,6 @@
 25W GST.200UB GIS analysis techniques 2 - Midterm Project – Group 5: Kocheganova Adilya, Wutte Timon, Flor Maximilian
  
-Project Titel: "Urban Green Space Accessibility & Suitability Analysis for Graz"
+Project Titel: "Urban Green Space Accessibility and Suitability Analysis for Graz"
 
 This repository documents a Jupyter Notebook workflow for reproducing a green space suitability and accessibility analysis. 
 The methodology follows and adapts the approach from Moisa et al. (2023), implemented entirely with open-source geospatial libraries.
@@ -13,7 +13,7 @@ Using multi-criteria evaluation (MCE) and network analysis, this project:
 3. Reveals spatial inequalities in environmental and infrastructural conditions.
 
 
-DATA SOURCES
+DATA SOURCES, downloaded on 04.12.2025
 
 - Road network (OSM)
 - River network (OSM) 
@@ -31,7 +31,7 @@ METHOD SUMMARY
 - Mosaicking raster tiles
 - Reprojecting (EPSG 31256)  
 - Clipping (Graz)  
-- Rasterizing (1 m resolution)
+- Rasterizing (10 m resolution)
 
 2. Deriving Criteria  
 - Slope (DEM)  
@@ -42,19 +42,18 @@ METHOD SUMMARY
 
 3. Suitability Modeling  
 - Normalization of criteria  
-- Weighting via Analytic Hierarchy Process (AHP)  
+- Weighting via Analytic Hierarchy Process  
 - Weighted overlay - Suitability Index
 
 4. Accessibility Modeling  
 - network extraction via OSMnx  
-- Walking distance & travel time to green spaces  
+- distance to green spaces  
 - Aggregation to population grid
 
 OUTPUTS
 
 - Suitability map  
-- Accessibility surface  
-- Combined inequality assessment  
+- Accessibility surface   
 
 
 ESSENTIAL TOOLS
